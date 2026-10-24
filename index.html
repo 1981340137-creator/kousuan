@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>口算小宇宙｜二年级数学练习</title>
+<style>
+:root{--ink:#23304a;--muted:#78839a;--blue:#5268e8;--mint:#dff8ee;--yellow:#fff0bd;--pink:#ffe3e7;--paper:#fffdf8;--line:#e9edf5}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 5%,#e4f3ff 0,transparent 28%),radial-gradient(circle at 95% 25%,#fff0d7 0,transparent 25%),#f6f8fc;color:var(--ink);font-family:ui-rounded,"PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+.wrap{max-width:1080px;margin:auto;padding:28px 18px 48px}.top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:26px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;font-size:20px}.logo{width:46px;height:46px;border-radius:15px;background:var(--blue);color:white;display:grid;place-items:center;font-size:25px;box-shadow:0 8px 18px #5268e83d}.tag{background:white;border:1px solid var(--line);border-radius:99px;padding:9px 14px;color:var(--muted);font-size:13px}
+.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch}.intro,.mascot,.panel{border:1px solid #ffffffd9;box-shadow:0 12px 35px #34466b0c;border-radius:28px}.intro{padding:30px;background:#fff;position:relative;overflow:hidden}.eyebrow{display:inline-flex;align-items:center;gap:7px;background:var(--mint);color:#22785e;border-radius:99px;padding:8px 12px;font-size:13px;font-weight:800}.intro h1{font-size:clamp(32px,5vw,52px);line-height:1.12;letter-spacing:-1.8px;margin:18px 0 12px}.intro h1 span{color:var(--blue)}.intro p{color:var(--muted);line-height:1.8;margin:0;max-width:520px}.mascot{background:linear-gradient(145deg,#dfe7ff,#f7e6ff);display:flex;align-items:center;justify-content:center;min-height:260px;position:relative;overflow:hidden}.planet{font-size:100px;filter:drop-shadow(0 15px 12px #5467b52b);animation:float 3.4s ease-in-out infinite}.spark{position:absolute;font-size:25px}.s1{top:23%;left:18%}.s2{right:17%;top:19%}.s3{bottom:20%;left:24%}.bubble{position:absolute;bottom:18px;right:18px;background:white;border-radius:15px;padding:10px 13px;font-size:13px;font-weight:800;transform:rotate(-3deg)}@keyframes float{50%{transform:translateY(-9px) rotate(3deg)}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0 28px}.stat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:15px 17px}.stat small{display:block;color:var(--muted);font-size:12px;margin-bottom:6px}.stat strong{font-size:23px}.stat strong em{font-size:13px;color:var(--muted);font-style:normal;font-weight:600}
+.practice{display:grid;grid-template-columns:290px 1fr;gap:20px;align-items:start}.panel{background:white;padding:22px}.panel h2{font-size:19px;margin:0 0 17px}.section-label{font-size:12px;color:var(--muted);font-weight:800;letter-spacing:.6px;margin:18px 0 10px}.levels{display:grid;gap:9px}.level{width:100%;border:1px solid var(--line);border-radius:14px;background:#fff;padding:12px;text-align:left;display:flex;align-items:center;gap:10px;font:inherit;cursor:pointer;color:var(--ink)}.level .emoji{font-size:21px}.level b{display:block;font-size:14px}.level small{display:block;color:var(--muted);margin-top:3px;font-size:12px}.level.active{border-color:var(--blue);background:#f1f3ff;box-shadow:inset 0 0 0 1px var(--blue)}.toggle{display:flex;align-items:center;justify-content:space-between;font-size:14px;margin-top:12px}.toggle input{accent-color:var(--blue);width:18px;height:18px}.primary,.secondary{border:0;border-radius:14px;padding:13px 16px;font:inherit;font-weight:800;cursor:pointer;transition:.15s}.primary{background:var(--blue);color:#fff;box-shadow:0 7px 15px #5268e82b}.primary:hover{transform:translateY(-1px)}.secondary{background:#f0f2f8;color:var(--ink)}.full{width:100%;margin-top:18px}
+.practice-head{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px}.practice-head h2{margin:0}.pill{background:#fff3cb;color:#876000;border-radius:99px;padding:8px 11px;font-size:12px;font-weight:800}.progress{height:8px;background:#eef0f6;border-radius:99px;overflow:hidden;margin-bottom:20px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#6b7cf0,#50c9a1);transition:width .25s}.questions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.question{border:1px solid var(--line);border-radius:17px;padding:14px 13px;display:flex;align-items:center;gap:8px;min-width:0;background:#fff}.qnum{width:26px;height:26px;border-radius:9px;background:#f1f3ff;color:var(--blue);display:grid;place-items:center;font-size:12px;font-weight:900;flex-shrink:0}.expr{font-size:19px;font-weight:850;white-space:nowrap}.answer{width:76px;min-width:0;margin-left:auto;border:1.5px solid #dce1ee;border-radius:10px;padding:9px 6px;font-size:17px;font-weight:800;text-align:center;color:var(--ink);outline:none}.answer:focus{border-color:var(--blue);box-shadow:0 0 0 3px #5268e81c}.answer.correct{border-color:#2eaf83;background:#e8fff5;color:#167857}.answer.wrong{border-color:#e77d8b;background:#fff0f2}.feedback{font-size:12px;min-height:18px;color:var(--muted);margin-top:13px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}.actions button{flex:1;min-width:130px}.result{display:none;margin-top:16px;background:#f2f5ff;border-radius:17px;padding:16px}.result h3{margin:0 0 6px}.result p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}.foot{text-align:center;color:#9aa3b5;font-size:12px;margin-top:24px}
+@media(max-width:760px){.hero{grid-template-columns:1fr}.mascot{min-height:190px}.planet{font-size:78px}.practice{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:20px}.intro{padding:24px}.top{align-items:flex-start}.tag{font-size:11px}.questions{grid-template-columns:1fr}.question{padding:12px}.answer{width:82px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top"><div class="brand"><div class="logo">✳</div><div>口算小宇宙 <span style="font-size:11px;color:#8992a6;font-weight:700;display:block;margin-top:2px">MENTAL MATH CLUB</span></div></div><div class="tag">🌈 二年级 · 每天进步一点点</div></header>
+  <section class="hero">
+    <div class="intro"><div class="eyebrow">⭐ 今日脑力热身</div><h1>让口算练习<br>变成一场<span>小冒险！</span></h1><p>加减乘除，循序渐进。选一个喜欢的关卡，认真算一算，看看今天能拿到多少颗星！</p></div>
+    <div class="mascot"><span class="spark s1">✦</span><span class="spark s2">✧</span><span class="spark s3">✦</span><div class="planet">🪐</div><div class="bubble">准备好出发了吗？</div></div>
+  </section>
+  <section class="stats">
+    <div class="stat"><small>🏅 本轮答对</small><strong id="score">0 <em>/ 10 题</em></strong></div>
+    <div class="stat"><small>⏱️ 用时</small><strong id="time">00:00</strong></div>
+    <div class="stat"><small>✨ 累计星星</small><strong id="stars">0 <em>颗</em></strong></div>
+  </section>
+  <main class="practice">
+    <aside class="panel">
+      <h2>选择练习关卡</h2>
+      <div class="section-label">按学习内容选择</div>
+      <div class="levels">
+        <button class="level active" data-mode="mix"><span class="emoji">🎯</span><span><b>综合闯关</b><small>加减乘除混合练习</small></span></button>
+        <button class="level" data-mode="add"><span class="emoji">🍎</span><span><b>加法小能手</b><small>两位数加法</small></span></button>
+        <button class="level" data-mode="sub"><span class="emoji">🚀</span><span><b>减法探索家</b><small>两位数减法</small></span></button>
+        <button class="level" data-mode="mul"><span class="emoji">🌟</span><span><b>乘法口诀星</b><small>2—9 的乘法口诀</small></span></button>
+        <button class="level" data-mode="div"><span class="emoji">🍬</span><span><b>除法分分乐</b><small>表内除法</small></span></button>
+      </div>
+      <div class="section-label">练习设置</div>
+      <label class="toggle">每轮题目数量 <select id="count" style="border:1px solid var(--line);border-radius:9px;padding:7px;background:white;color:var(--ink)"><option>10</option><option>15</option><option>20</option></select></label>
+      <label class="toggle">答题后显示答案 <input id="showAnswers" type="checkbox" checked></label>
+      <button class="primary full" id="startBtn">↻ 生成新题目</button>
+    </aside>
+    <section class="panel">
+      <div class="practice-head"><h2>✏️ 开始口算</h2><span class="pill" id="round">第 1 轮练习</span></div>
+      <div class="progress"><span id="bar"></span></div>
+      <div class="questions" id="questions"></div>
+      <div class="feedback" id="feedback">在空格里填写答案，全部完成后点击「检查答案」吧！</div>
+      <div class="actions"><button class="primary" id="checkBtn">✓ 检查答案</button><button class="secondary" id="nextBtn">下一轮 →</button></div>
+      <div class="result" id="result"><h3 id="resultTitle">做得真棒！</h3><p id="resultText"></p></div>
+    </section>
+  </main>
+  <div class="foot">口算小宇宙 · 练习不求快，认真最重要 💛</div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+let mode='mix', qs=[], round=1, stars=0, startedAt=Date.now(), timer=null, checked=false;
+const rand=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+function makeQuestion(m){
+  if(m==='mix') m=['add','sub','mul','div'][rand(0,3)];
+  let a,b,op,ans;
+  if(m==='add'){a=rand(10,89);b=rand(1,99-a);op='+';ans=a+b;}
+  if(m==='sub'){a=rand(20,99);b=rand(1,a);op='−';ans=a-b;}
+  if(m==='mul'){a=rand(2,9);b=rand(2,9);op='×';ans=a*b;}
+  if(m==='div'){b=rand(2,9);ans=rand(2,9);a=b*ans;op='÷';}
+  return {a,b,op,ans};
+}
+function fmtTime(s){return String(Math.floor(s/60)).padStart(2,'0')+':'+String(s%60).padStart(2,'0')}
+function startTimer(){if(timer)clearInterval(timer);startedAt=Date.now();$('time').textContent='00:00';timer=setInterval(()=>{$('time').textContent=fmtTime(Math.floor((Date.now()-startedAt)/1000))},1000)}
+function render(){
+  checked=false;$('result').style.display='none';$('feedback').textContent='在空格里填写答案，全部完成后点击「检查答案」吧！';
+  $('round').textContent='第 '+round+' 轮练习';$('score').innerHTML='0 <em>/ '+qs.length+' 题</em>';$('bar').style.width='0%';
+  $('questions').innerHTML=qs.map((q,i)=>`<label class="question"><span class="qnum">${String(i+1).padStart(2,'0')}</span><span class="expr">${q.a} ${q.op} ${q.b} =</span><input class="answer" inputmode="numeric" autocomplete="off" aria-label="第${i+1}题答案" data-index="${i}" placeholder="?" /></label>`).join('');
+  $('questions').querySelectorAll('.answer').forEach((el,i)=>el.addEventListener('input',()=>{let done=[...$('questions').querySelectorAll('.answer')].filter(x=>x.value.trim()!=='').length;$('bar').style.width=(done/qs.length*100)+'%'}));
+  startTimer();
+}
+function newRound(){qs=Array.from({length:Number($('count').value)},()=>makeQuestion(mode));render()}
+function check(){
+  if(checked){$('feedback').textContent='这一轮已经检查过啦，点击「下一轮」继续挑战！';return}
+  const inputs=[...$('questions').querySelectorAll('.answer')];let correct=0,empty=0;
+  inputs.forEach((el,i)=>{const val=el.value.trim();el.classList.remove('correct','wrong');if(val===''){empty++;el.classList.add('wrong')}else if(Number(val)===qs[i].ans){correct++;el.classList.add('correct')}else el.classList.add('wrong');
+    if($('showAnswers').checked){const q=qs[i];let old=el.parentElement.querySelector('.answer-note');if(old)old.remove();if(val===''||Number(val)!==q.ans){let note=document.createElement('span');note.className='answer-note';note.style.cssText='font-size:12px;color:#d05c6b;white-space:nowrap';note.textContent='答案 '+q.ans;el.insertAdjacentElement('afterend',note)}}});
+  checked=true;stars+=correct;$('stars').innerHTML=stars+' <em>颗</em>';$('score').innerHTML=correct+' <em>/ '+qs.length+' 题</em>';$('bar').style.width='100%';
+  $('feedback').textContent=empty?`还有 ${empty} 题没有填写。`:(correct===qs.length?'全部答对，太厉害啦！':'检查一下红色标记的题目，再接再厉！');
+  $('result').style.display='block';$('resultTitle').textContent=correct===qs.length?'🎉 完美通关！':correct>=qs.length*.7?'🌟 做得很不错！':'💪 再练一轮会更棒！';
+  $('resultText').textContent=`本轮答对 ${correct}/${qs.length} 题，用时 ${$('time').textContent}。${correct===qs.length?'获得 '+correct+' 颗星星！':'别着急，看看解析，再试一次。'}`;
+}
+document.querySelectorAll('.level').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('.level').forEach(b=>b.classList.remove('active'));btn.classList.add('active');mode=btn.dataset.mode;newRound()}));
+$('startBtn').addEventListener('click',()=>{round=1;newRound()});
+$('checkBtn').addEventListener('click',check);
+$('nextBtn').addEventListener('click',()=>{round++;newRound()});
+newRound();
+</script>
+</body>
+</html>
